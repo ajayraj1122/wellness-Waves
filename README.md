@@ -217,10 +217,6 @@ We welcome contributions to Wellness Waves! Please follow these steps:
 - Write tests for new features
 - Update documentation as needed
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - Mental health professionals who provided guidance

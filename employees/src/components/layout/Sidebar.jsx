@@ -39,7 +39,7 @@ const Sidebar = () => {
     { name: "Serene AI", icon: <CircleDashed size={30} />, link: "/serene-ai", onClick: () => setShowComingSoonPopup(true) },
     { name: "Challenges", icon: <TrophyIcon size={30} />, link: "/challenges" },
     { name: "Expert", icon: <Team size={30} />, link: "/expert" },
-    { name: "Group Coaching", icon: <MedalIcon size={30} />, link: "/group-coaching" }
+
   ];
 
   const handleLogout = () => {
@@ -147,8 +147,8 @@ const Sidebar = () => {
       ))}
 
            <div className="flex items-center justify-center gap-2 mb-6 py-4">
-        <img src="\logo-03.png" alt="Ekaant Logo" className="h-18 w-18" />
-        <div className="text-4xl text-white">EKAANT</div>
+        <img src="\mylogo.png" alt="Ekaant Logo" className="h-15 w-45" />
+        
       </div>
       <div className="flex-2 bg-black/30 backdrop-blur-sm p-4 rounded-tr-[40px] rounded-tl-[40px] mt-6 py-4 px-4">
         <nav>

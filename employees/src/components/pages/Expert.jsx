@@ -13,10 +13,10 @@ const experts = [
     rating: 4.5,
     levels: 10,
     overview: "Saumya is a Clinical Psychologist with over 8+ years of experience. Her areas of expertise include depression, anxiety, self-esteem issues, emotional exhaustion, stress, adjustment issues, interpersonal relationship concerns, social anxiety, self-confidence concerns, and panic attacks.",
-    email: "ekaant.co@gmail.com",
+    email: "mansi.91289@gmail.com",
     availability: [
       {
-        date: "2025-05-22",
+        date: "2025-10-22",
         slots: [
          
           { start: "13:00", end: "13:45" },
@@ -24,7 +24,7 @@ const experts = [
         ]
       },
       {
-        date: "2025-04-23",
+        date: "2025-11-23",
         slots: [
           
           { start: "15:00", end: "15:45" },
@@ -32,7 +32,7 @@ const experts = [
         ]
       },
       {
-        date: "2025-05-26",
+        date: "2025-10-26",
         slots: [
           
           { start: "13:00", end: "13:45" },
@@ -40,7 +40,7 @@ const experts = [
         ]
       },
       {
-        date: "2025-05-27",
+        date: "2025-10-27",
         slots: [
           
           { start: "11:00", end: "11:45" },
@@ -57,10 +57,10 @@ const experts = [
     rating: 4.3,
     levels: 8,
     overview: "Swati Sharma is a seasoned professional in social work and psychological wellness with more than 6+ years of experience. She has worked extensively in foster care, drug education, and individual, family, and couples counseling.  Her expertise includes crisis counseling for adolescents, psychological first aid, and addressing relationship challenges. Swati specializes in managing social anxiety, trauma, stress, anger, and emotional well-being. ",
-    email: "ekaant.co@gmail.com",
+    email: "mansi.91289@gmail.com",
     availability: [
           {
-        date: "2025-05-22",
+        date: "2025-11-22",
         slots: [
          
           { start: "13:00", end: "13:45" },
@@ -68,7 +68,7 @@ const experts = [
         ]
       },
       {
-        date: "2025-04-23",
+        date: "202511-23",
         slots: [
           
           { start: "15:00", end: "15:45" },
@@ -76,7 +76,7 @@ const experts = [
         ]
       },
       {
-        date: "2025-05-26",
+        date: "2025-10-26",
         slots: [
           
           { start: "13:00", end: "13:45" },
@@ -84,7 +84,7 @@ const experts = [
         ]
       },
       {
-        date: "2025-05-27",
+        date: "2025-10-27",
         slots: [
           
           { start: "11:00", end: "11:45" },
@@ -100,10 +100,10 @@ const experts = [
     rating: 4.7,
     levels: 12,
     overview: "With over a decade of experience in counseling psychologists, Ms. Vishwa Puranik specializes in evidence-based practices to enhance mental health and well-being. Her areas of expertise include family counseling, parenting support, adolescent therapy, women’s issues, mindfulness practices and many more. As a certified Yoga Teacher, her holistic approach fosters balance and resilience. With a compassionate and tailored style, she empowers clients to thrive in all aspects of life.",
-    email: "ekaant.co@gmail.com",
+    email: "mansi.91289@gmail.com",
     availability: [
           {
-        date: "2025-05-22",
+        date: "2025-11-22",
         slots: [
          
           { start: "13:00", end: "13:45" },
@@ -111,7 +111,7 @@ const experts = [
         ]
       },
       {
-        date: "2025-04-23",
+        date: "2025-11-23",
         slots: [
           
           { start: "15:00", end: "15:45" },
@@ -119,7 +119,7 @@ const experts = [
         ]
       },
       {
-        date: "2025-05-26",
+        date: "2025-10-26",
         slots: [
           
           { start: "17:00", end: "17:45" },
@@ -127,7 +127,7 @@ const experts = [
         ]
       },
       {
-        date: "2025-05-27",
+        date: "2025-10-27",
         slots: [
           
           { start: "17:00", end: "17:45" },
@@ -142,11 +142,11 @@ const experts = [
     specialization: "Yoga Practitioner", 
     rating: 4.6,
     levels: 9,
-    overview: "Dr. Shweta Sharma is a licensed Clinical Psychologist with the Rehabilitation Council of India [A-24504] and has experience of more than 12 years in this field of mental health. Her expertise lies in Cognitive Behavior Therapy, Psychoanalysis, Marital therapy, Neuropsychological Problems and assessment, and Personality Assessment.",
-    email: "ekaant.co@gmail.com",
+    overview: "Dr. Shweta Sharma is a licensed Clinical Psychologist with the Rehabilitation Council of India [A-2411] and has experience of more than 12 years in this field of mental health. Her expertise lies in Cognitive Behavior Therapy, Psychoanalysis, Marital therapy, Neuropsychological Problems and assessment, and Personality Assessment.",
+    email: "mansi.91289@gmail.com",
     availability: [
          {
-        date: "2025-05-22",
+        date: "2025-11-22",
         slots: [
          
           { start: "13:00", end: "13:45" },
@@ -154,7 +154,7 @@ const experts = [
         ]
       },
       {
-        date: "2025-04-23",
+        date: "2025-11-23",
         slots: [
           
           { start: "15:00", end: "15:45" },
@@ -210,7 +210,7 @@ const [showAllSessions, setShowAllSessions] = useState(false);
         }
 
         setIsLoading(true);
-        const response = await axios.get("https://employee.ekaant.co/api/employee/profile", {
+        const response = await axios.get("http://localhost:3000/api/employee/profile", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -247,7 +247,7 @@ const [showAllSessions, setShowAllSessions] = useState(false);
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          `https://employee.ekaant.co/api/expert-session/employee/${employeeEmail}`,
+          `http://localhost:3000/api/expert-session/employee/${employeeEmail}`,
           {
             headers: {
               Authorization: `Bearer ${token}`
@@ -284,7 +284,7 @@ const SESSION_COST = 100;
 
         // Check if slot is already booked
         const checkResponse = await axios.get(
-            `https://employee.ekaant.co/api/expert-session/check-availability/${selectedExpert.email}/${selectedDate}/${selectedStartTime}`,
+            `http://localhost:3000/api/expert-session/check-availability/${selectedExpert.email}/${selectedDate}/${selectedStartTime}`,
             {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -367,7 +367,7 @@ const SESSION_COST = 100;
 
         const token = localStorage.getItem("token");
         const response = await axios.post(
-            "https://employee.ekaant.co/api/expert-session/book",
+            "http://localhost:3000/api/expert-session/book",
             requestBody,
             { 
               headers: { 
@@ -403,7 +403,7 @@ const SESSION_COST = 100;
 
         try {
             await axios.post(
-                "https://employee.ekaant.co/api/notifications",
+                "http://localhost:3000/api/notifications",
                 notificationData,
                 {
                     headers: {
@@ -424,7 +424,7 @@ const SESSION_COST = 100;
             throw new Error('No authentication token found');
           }
 
-          const response = await fetch('https://employee.ekaant.co/api/barchart/update', {
+          const response = await fetch('http://localhost:3000/api/barchart/update', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -455,7 +455,7 @@ const SESSION_COST = 100;
         // Update MongoDB LineChart
         try {
           const token = localStorage.getItem("token");
-          await fetch('https://employee.ekaant.co/api/linechart/update', {
+          await fetch('http://localhost:3000/api/linechart/update', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -509,7 +509,7 @@ const SESSION_COST = 100;
       }
 
       const response = await axios.post(
-        `https://employee.ekaant.co/api/expert-session/cancel/${employeeEmail}`,
+        `http://localhost:3000/api/expert-session/cancel/${employeeEmail}`,
         { 
           expertEmail,
           sessionDate,
@@ -543,7 +543,7 @@ const SESSION_COST = 100;
               throw new Error('No authentication token found');
             }
 
-            const response = await fetch('https://employee.ekaant.co/api/barchart/update', {
+            const response = await fetch('http://localhost:3000/api/barchart/update', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -581,7 +581,7 @@ const SESSION_COST = 100;
             // Update MongoDB LineChart
             try {
               const token = localStorage.getItem("token");
-              await fetch('https://employee.ekaant.co/api/linechart/update', {
+              await fetch('http://localhost:3000/api/linechart/update', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
@@ -614,7 +614,7 @@ const SESSION_COST = 100;
             };
 
             await axios.post(
-              "https://employee.ekaant.co/api/notifications",
+              "http://localhost:3000/api/notifications",
               notificationData,
               {
                 headers: {
@@ -875,7 +875,7 @@ const SESSION_COST = 100;
                   />
                   <div className="absolute top-3 right-3 bg-white bg-opacity-90 text-indigo-600 px-2 py-1 rounded-lg flex items-center shadow-sm">
                     <svg className="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      <path d="M9119 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                     <span className="ml-1 font-medium">{expert.rating}</span>
                   </div>
@@ -981,7 +981,7 @@ const SESSION_COST = 100;
                       viewBox="0 0 20 20" 
                       fill="currentColor"
                     >
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      <path d="M9119 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
                   <span className="ml-2 text-white">{selectedExpert.rating}</span>

@@ -69,17 +69,17 @@ export const signup = async (req, res) => {
 
     try {
       const mailOptions = {
-        from: `"EKAANT TEAM" <${process.env.COMPANY_EMAIL}>`,
+        from: `"WELLNESS-WAVES TEAM" <${process.env.COMPANY_EMAIL}>`,
         to: email,
-        subject: "Welcome to EKAANT - Verify Your Email",
+        subject: "Welcome to wellnesswaves - Verify Your Email",
         html: `
           <div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; background: linear-gradient(to bottom right, #ffffff, #f5f7ff);">
             <div style="text-align: center; margin-bottom: 20px;">
             </div>
             <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-              <h1 style="color: #2b3481; margin-bottom: 20px; text-align: center;">Welcome to EKAANT!</h1>
+              <h1 style="color: #2b3481; margin-bottom: 20px; text-align: center;">Welcome to wellnesswaves!</h1>
               <p style="color: #444; font-size: 16px;">Hi ${username},</p>
-              <p style="color: #444; font-size: 16px;">Thank you for signing up with EKAANT – we're excited to have you onboard! 🎉</p>
+              <p style="color: #444; font-size: 16px;">Thank you for signing up with wellnesswaves – we're excited to have you onboard! 🎉</p>
              
               <div style="background: #f8faff; padding: 20px; border-radius: 8px; margin: 25px 0; text-align: center;">
                 <p style="color: #2b3481; font-size: 18px; margin-bottom: 15px;">Your One-Time Password (OTP):</p>
@@ -94,13 +94,13 @@ export const signup = async (req, res) => {
               </div>
               <div style="text-align: center; margin-top: 30px;">
                 <p style="color: #444; font-size: 16px;">Need assistance? We're here to help!</p>
-                <a href="mailto:support@ekaant.co" style="color: #2b3481; text-decoration: none; font-weight: bold;">himanshu@ekaant.co</a>
+                <a href="mailto:support@wellnesswaves.co" style="color: #2b3481; text-decoration: none; font-weight: bold;">xyz@wellnesswaves.co</a>
               </div>
             </div>
             <div style="text-align: center; margin-top: 20px; padding: 20px; color: #666;">
               <p style="margin: 5px 0;">Let's build a healthier, more engaged workplace – together. 💙</p>
               <div style="margin-top: 15px;">
-                <a href="http://www.ekaant.co" style="color: #2b3481; text-decoration: none; font-weight: bold;">www.ekaant.co</a>
+                <a href="http://www.wellnesswaves.co" style="color: #2b3481; text-decoration: none; font-weight: bold;">www.wellnesswaves.co</a>
               </div>
             </div>
           </div>
@@ -162,9 +162,9 @@ export const setPassword = async (req, res) => {
 
     // Send welcome email
     const welcomeMailOptions = {
-      from: `"EKAANT TEAM" <${process.env.COMPANY_EMAIL}>`,
+      from: `"wellness-waves TEAM" <${process.env.COMPANY_EMAIL}>`,
       to: email,
-      subject: "A Warm Welcome from Ekaant 💙",
+      subject: "A Warm Welcome from wellness-waves 💙",
       html: `
         <div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; background: linear-gradient(to bottom right, #ffffff, #f5f7ff);">
           <div style="text-align: center; margin-bottom: 20px;">
@@ -172,12 +172,12 @@ export const setPassword = async (req, res) => {
           <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
             <h1 style="color: #2b3481; margin-bottom: 20px; text-align: center;">Welcome to Your Journey!</h1>
             <p style="color: #444; font-size: 16px; line-height: 1.6;">Dear ${employee.username},</p>
-            <p style="color: #444; font-size: 16px; line-height: 1.6;">I'm Himanshu, the founder at EKAANT, and I wanted to personally thank you for taking this first step toward your mental well-being. 🌟</p>
+            <p style="color: #444; font-size: 16px; line-height: 1.6;">I wanted to personally thank you for taking this first step toward your mental well-being. 🌟</p>
             <div style="background: #f8faff; padding: 20px; border-radius: 8px; margin: 25px 0;">
-              <p style="color: #444; font-size: 16px; line-height: 1.6;">Life gets busy. Stress builds up. And sometimes, it's hard to even find the right space to pause and reflect. That's why we created Ekaant — a place where you can talk freely, feel supported, and take care of your mental and emotional health on your terms.</p>
+              <p style="color: #444; font-size: 16px; line-height: 1.6;">Life gets busy. Stress builds up. And sometimes, it's hard to even find the right space to pause and reflect. That's why we created wellness-waves — a place where you can talk freely, feel supported, and take care of your mental and emotional health on your terms.</p>
             </div>
             <div style="margin: 30px 0;">
-              <h2 style="color: #2b3481; font-size: 20px; margin-bottom: 15px;">Your EKAANT Journey Includes:</h2>
+              <h2 style="color: #2b3481; font-size: 20px; margin-bottom: 15px;">Your wellness-waves Journey Includes:</h2>
               <div style="background: white; border-left: 4px solid #2b3481; padding: 15px; margin: 10px 0;">
                 <p style="color: #444; font-size: 16px; margin: 10px 0;">🧠 <strong>Confidential Therapy & Coaching</strong></p>
                 <p style="color: #666; font-size: 14px;">Professional support tailored to your needs</p>
@@ -196,15 +196,15 @@ export const setPassword = async (req, res) => {
             </div>
             <div style="text-align: center; margin-top: 30px;">
               <p style="color: #444; font-size: 16px;">Have questions or feedback?</p>
-              <p style="color: #444; font-size: 16px;">Write to me directly at <a href="mailto:himanshu@ekaant.co" style="color: #2b3481; text-decoration: none; font-weight: bold;">himanshu@ekaant.co</a></p>
+              <p style="color: #444; font-size: 16px;">Write to me directly at <a href="mailto:xyy@wellness-waves.co" style="color: #2b3481; text-decoration: none; font-weight: bold;">xyy@wellness-waves.co</a></p>
             </div>
           </div>
           <div style="text-align: center; margin-top: 20px; padding: 20px; color: #666;">
-            <p style="margin: 5px 0;">Take care, and welcome to Ekaant.</p>
-            <p style="margin: 15px 0; color: #2b3481; font-weight: bold;">Himanshu Sharma</p>
-            <p style="margin: 5px 0; color: #666;">Founder & CEO - EKAANT</p>
+            <p style="margin: 5px 0;">Take care, and welcome to wellness-waves.</p>
+            <p style="margin: 15px 0; color: #2b3481; font-weight: bold;">xyz</p>
+            <p style="margin: 5px 0; color: #666;">Founder & CEO - wellness-waves</p>
             <div style="margin-top: 15px;">
-              <a href="http://www.ekaant.co" style="color: #2b3481; text-decoration: none; font-weight: bold;">www.ekaant.co</a>
+              <a href="http://www.wellness-waves.co" style="color: #2b3481; text-decoration: none; font-weight: bold;">www.wellness-waves.co</a>
             </div>
           </div>
         </div>
@@ -225,7 +225,7 @@ export const setPassword = async (req, res) => {
     });
 
     res.header('Access-Control-Allow-Credentials', 'true');
-    res.header('Access-Control-Allow-Origin', 'https://ekaant.onrender.com');
+    res.header('Access-Control-Allow-Origin', 'http://localhost:5173');
 
     res.status(200).json({ success: true, message: "Password set successfully!", token, employee });
   } catch (error) {
@@ -257,7 +257,7 @@ export const signin = async (req, res) => {
     });
 
     res.header('Access-Control-Allow-Credentials', 'true');
-    res.header('Access-Control-Allow-Origin', 'https://ekaant.onrender.com');
+    res.header('Access-Control-Allow-Origin', 'http://localhost:5173');
 
     res.status(200).json({ success: true, token, employee });
   } catch (error) {
@@ -336,7 +336,7 @@ export const bookSession = async (req, res) => {
       Join the meeting using this link: ${meetingLink}
 
       Regards,
-      Ekaant Team
+      wellness-waves Team
     `;
 
     const expertSubject = "📅 New Session Scheduled with Employee";
@@ -350,7 +350,7 @@ export const bookSession = async (req, res) => {
       Join the meeting using this link: ${meetingLink}
 
       Regards,
-      Ekaant Team
+      wellness-waves Team
     `;
 
     // ✅ Send Emails and Validate Sending
@@ -556,7 +556,7 @@ export const sendOtpForReset = async (req, res) => {
 
     // ✅ Email Content
     const mailOptions = {
-      from: `"EKAANT TEAM" <${process.env.COMPANY_EMAIL}>`,
+      from: `"wellness-waves TEAM" <${process.env.COMPANY_EMAIL}>`,
       to: email,
       subject: "Reset Your Password - OTP Code",
       text: `Your OTP for password reset is ${otp}. It is valid for 10 minutes.`,

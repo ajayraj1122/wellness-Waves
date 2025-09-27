@@ -160,7 +160,7 @@ const Signup = () => {
     }
     setLoading(true);
     try {
-      const res = await axios.post("https://localhost:3000/api/set-password", {
+      const res = await axios.post("http://localhost:3000/api/set-password", {
         email: formData.email,
         password: formData.password
       });
@@ -318,15 +318,15 @@ const Signup = () => {
                   </div>
                 </div>
                 <input
-                  type="email"
-                  name="email"
-                  placeholder="john@company.com"
-                  onChange={handleChange}
-                  className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50"
-                  required
-                  pattern="^[a-zA-Z0-9._%+-]+@(?!gmail\.com)(?!yahoo\.com)(?!hotmail\.com)(?!.*\.com$)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                  title="Please use your company email address"
-                />
+  type="email"
+  name="email"
+  placeholder="john@company.com"
+  onChange={handleChange}
+  className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50"
+  required
+  pattern="^[a-zA-Z0-9._%+-]+@(?!gmail\.com|yahoo\.com|hotmail\.com)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+  title="Please use your company email address (no Gmail, Yahoo, or Hotmail)"
+/>
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Employee ID</label>

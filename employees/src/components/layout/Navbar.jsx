@@ -19,7 +19,7 @@ const Navbar = () => {
       if (!token) return;
 
       const response = await axios.get(
-        "https://employee.ekaant.co/api/notifications",
+        "http://localhost:3000/api/notifications",
         {
           headers: { 
             Authorization: `Bearer ${token}`,
@@ -67,7 +67,7 @@ const Navbar = () => {
         return;
       }
   
-      const response = await axios.get("https://employee.ekaant.co/api/employee/profile", {
+      const response = await axios.get("http://localhost:3000/api/employee/profile", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -114,7 +114,7 @@ const Navbar = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        `https://employee.ekaant.co/api/notifications/read/${notificationId}`,
+        `http://localhost:3000/api/notifications/read/${notificationId}`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` }

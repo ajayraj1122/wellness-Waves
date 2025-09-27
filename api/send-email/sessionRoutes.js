@@ -46,7 +46,7 @@ router.post("/book", async (req, res) => {
     `;
 
     // Call the email API
-    await axios.post("http://0.0.0.0:3000/api/send-email", {
+    await axios.post("http://localhost:3000/api/send-email", {
       to: user.email,
       subject: emailSubject,
       text: emailText,

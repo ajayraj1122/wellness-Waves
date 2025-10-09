@@ -116,7 +116,7 @@ import Home from "./components/pages/Home";
 import Analytics from "./components/pages/Analytics";
 import Profile from "./components/pages/Profile";
 import Program from "./components/pages/Program";
-import GroupCoaching from "./components/pages/GroupCoaching";
+//import GroupCoaching from "./components/pages/GroupCoaching";
 import SereneAi from "./components/pages/SereneAI";
 import Challenges from "./components/pages/Challenges";
 import Expert from "./components/pages/Expert";
@@ -198,7 +198,7 @@ export default function App() {
             <Route path="/analytics" element={<Layout><Analytics /></Layout>} />
             <Route path="/profile" element={<Layout><Profile /></Layout>} />
             <Route path="/program" element={<Layout><Program /></Layout>} />
-            <Route path="/group-coaching" element={<Layout><GroupCoaching /></Layout>} />
+       
             <Route path="/serene-ai" element={<Layout><SereneAi /></Layout>} />
             <Route path="/challenges" element={<Layout><Challenges /></Layout>} />
             <Route path="/expert" element={<Layout><Expert /></Layout>} />
